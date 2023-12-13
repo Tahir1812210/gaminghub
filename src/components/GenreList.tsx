@@ -1,4 +1,4 @@
-import { Genre } from '../hooks/useGenre';
+import useGenre, { Genre } from '../hooks/useGenre';
 import useData from '../hooks/useData';
 import {
   Button,
@@ -18,7 +18,7 @@ interface Props {
 }
 
 const GenreList = ({ selectedGenre, onSelectedGenre }: Props) => {
-  const { data, isLoading, error } = useData<Genre>('/genres');
+  const { data, isLoading, error } = useGenre();
   if (error) return null;
   if (isLoading) return <Spinner />;
   return (
