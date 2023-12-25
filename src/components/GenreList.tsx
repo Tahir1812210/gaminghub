@@ -1,5 +1,4 @@
 import useGenre, { Genre } from '../hooks/useGenre';
-import useData from '../hooks/useData';
 import {
   Button,
   HStack,
